@@ -1,11 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Typography from '@mui/material/Typography';
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `black`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -13,10 +14,10 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <Typography variant="h2" component="h2">
         <Link
           to="/"
           style={{
@@ -26,7 +27,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </Typography>
     </div>
   </header>
 )

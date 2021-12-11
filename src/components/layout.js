@@ -5,7 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
+ import '@fontsource/roboto/300.css';
+ import '@fontsource/roboto/400.css';
+ import '@fontsource/roboto/500.css';
+ import '@fontsource/roboto/700.css';
+
 import * as React from "react"
+
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -31,6 +37,8 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         <main>{children}</main>
@@ -39,9 +47,6 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
     </>
